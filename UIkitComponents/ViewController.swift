@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var visitTextField: UITextField!
     @IBOutlet weak var genderSegment: UISegmentedControl!
     @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var weightSliderText: UILabel!
+    @IBOutlet weak var puppyCount: UIStepper!
+    @IBOutlet weak var puppyCountLabel: UILabel!
+    
 //MARK: -Class Variable
     private var datePicker = UIDatePicker()
     private var heightPicker = UIPickerView()
@@ -23,6 +27,8 @@ class ViewController: UIViewController {
         self.title = "Dog Profile"
         setupVisit()
         setupHeight()
+        setupSlider()
+        setupStepper()
         self.datePicker.addTarget(self, action: #selector(setDate), for: .valueChanged)
 
     }
@@ -38,10 +44,34 @@ class ViewController: UIViewController {
         heightPicker.delegate = self
     }
     private func keyboardWillShow() {}
-    
+
     private func dismissKeyboard() {
         self.view.endEditing(true)
     }
+    
+    func setupStepper() {
+        self.puppyCount.addTarget(self, action: #selector(puppyCountValue), for: .valueChanged)
+    }
+    func setupSlider() {
+            self.weightSlider.value = 50
+            self.weightSlider.maximumValue = 170
+            self.weightSlider.minimumValue = 10
+            self.weightSlider.addTarget(self, action: #selector(updateWeightValue), for: .valueChanged)
+        }
+    
+    @objc func puppyCountValue() {
+        
+        if puppyCount.value == 1 {
+            
+            self.puppyCountLabel.text = " \(Int(self.puppyCount.value)) Puppy"
+        } else {
+        self.puppyCountLabel.text = " \(Int(self.puppyCount.value)) Puppies"
+        }
+    }
+
+    @objc func updateWeightValue() {
+            self.weightSliderText.text = "\(Int(self.weightSlider.value)) lbs"
+        }
 //MARK: - Action Function
     @objc func setDate(){
         let calendar =  Calendar.current
@@ -53,6 +83,10 @@ class ViewController: UIViewController {
            let year = components.year {
             self.visitTextField.text = "\(month)/\(day)/\(year)"
         }
+    }
+    
+    func setupSwitch() {
+        
     }
 }
 
