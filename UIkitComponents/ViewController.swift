@@ -37,6 +37,11 @@ class ViewController: UIViewController {
         self.heightTextField.inputView = heightPicker
         heightPicker.delegate = self
     }
+    private func keyboardWillShow() {}
+    
+    private func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 //MARK: - Action Function
     @objc func setDate(){
         let calendar =  Calendar.current

@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="n91-Vr-JOe">
-                                <rect key="frame" x="97" y="187" width="211" height="31"/>
+                                <rect key="frame" x="97" y="187" width="186" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" is this your first visit?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gno-il-E56">
                                 <rect key="frame" x="14" y="260" width="234" height="21"/>
@@ -86,20 +86,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weightLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-yC-G1k">
+                                <rect key="frame" x="309" y="191" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XBs-Pd-yMA" firstAttribute="top" secondItem="JpU-nM-0A2" secondAttribute="bottom" constant="48" id="3Ld-7a-f7o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yL-jz-VlB" secondAttribute="trailing" constant="12" id="4gM-Xq-U99"/>
+                            <constraint firstAttribute="trailing" secondItem="gPr-yC-G1k" secondAttribute="trailing" constant="12" id="7uy-53-vnC"/>
                             <constraint firstItem="QGQ-nz-cee" firstAttribute="top" secondItem="ZD2-4n-adw" secondAttribute="bottom" constant="52" id="A5Y-J9-3Y7"/>
+                            <constraint firstItem="gPr-yC-G1k" firstAttribute="top" secondItem="JpU-nM-0A2" secondAttribute="bottom" constant="48" id="C7f-D7-AyA"/>
                             <constraint firstItem="QTv-XQ-aKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Cls-Vg-EnM"/>
+                            <constraint firstItem="gPr-yC-G1k" firstAttribute="leading" secondItem="n91-Vr-JOe" secondAttribute="trailing" constant="28" id="GJk-ph-Gpn"/>
                             <constraint firstItem="YmJ-Zx-cNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Jcx-1B-iet"/>
                             <constraint firstItem="VJs-YC-Ny1" firstAttribute="top" secondItem="1yL-jz-VlB" secondAttribute="bottom" constant="63" id="Nou-SR-PnD"/>
                             <constraint firstItem="QTv-XQ-aKo" firstAttribute="top" secondItem="Gno-il-E56" secondAttribute="bottom" constant="68" id="PMX-sT-qkQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JpU-nM-0A2" secondAttribute="trailing" constant="12" id="Q6c-aH-JRa"/>
                             <constraint firstItem="ZD2-4n-adw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QJz-ZV-okO"/>
-                            <constraint firstItem="XBs-Pd-yMA" firstAttribute="leading" secondItem="n91-Vr-JOe" secondAttribute="trailing" constant="96" id="UCZ-ui-LaR"/>
                             <constraint firstItem="t0j-dh-ekK" firstAttribute="leading" secondItem="QTv-XQ-aKo" secondAttribute="trailing" constant="12" id="WdA-5m-flE"/>
                             <constraint firstItem="Gno-il-E56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Xct-m6-pGM"/>
                             <constraint firstItem="QGQ-nz-cee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="a0y-rD-skl"/>
