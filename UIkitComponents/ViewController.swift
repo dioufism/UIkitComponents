@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var weightSliderText: UILabel!
     @IBOutlet weak var puppyCount: UIStepper!
     @IBOutlet weak var puppyCountLabel: UILabel!
-    
 //MARK: -Class Variable
     private var datePicker = UIDatePicker()
     private var heightPicker = UIPickerView()
@@ -48,7 +47,6 @@ class ViewController: UIViewController {
     private func dismissKeyboard() {
         self.view.endEditing(true)
     }
-    
     func setupStepper() {
         self.puppyCount.addTarget(self, action: #selector(puppyCountValue), for: .valueChanged)
     }
@@ -58,11 +56,8 @@ class ViewController: UIViewController {
             self.weightSlider.minimumValue = 10
             self.weightSlider.addTarget(self, action: #selector(updateWeightValue), for: .valueChanged)
         }
-    
     @objc func puppyCountValue() {
-        
         if puppyCount.value == 1 {
-            
             self.puppyCountLabel.text = " \(Int(self.puppyCount.value)) Puppy"
         } else {
         self.puppyCountLabel.text = " \(Int(self.puppyCount.value)) Puppies"
@@ -72,21 +67,16 @@ class ViewController: UIViewController {
     @objc func updateWeightValue() {
             self.weightSliderText.text = "\(Int(self.weightSlider.value)) lbs"
         }
-//MARK: - Action Function
-    @objc func setDate(){
+//MARK:- Action Function
+    @objc func setDate() {
         let calendar =  Calendar.current
         let components =  calendar.dateComponents([.day, .month, .year], from: self.datePicker.date)
 
-        
         if let day = components.day,
            let month = components.month,
            let year = components.year {
             self.visitTextField.text = "\(month)/\(day)/\(year)"
         }
-    }
-    
-    func setupSwitch() {
-        
     }
 }
 
