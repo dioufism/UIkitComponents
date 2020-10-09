@@ -58,16 +58,56 @@
 		DAA8DB54251E50F10052AF85 /* UIkitComponents */ = {
 			isa = PBXGroup;
 			children = (
-				DAA8DB55251E50F10052AF85 /* AppDelegate.swift */,
-				DAA8DB57251E50F10052AF85 /* SceneDelegate.swift */,
-				DAA8DB59251E50F10052AF85 /* ViewController.swift */,
-				DAA8DB5B251E50F10052AF85 /* Main.storyboard */,
+				DAB5BDC2253028F4006B1AEF /* Supporting Files */,
+				DAB5BDC1253028B8006B1AEF /* StoryBoards */,
+				DAB5BDBE2530288A006B1AEF /* Model */,
+				DAB5BDBF25302894006B1AEF /* View */,
+				DAB5BDC0253028A3006B1AEF /* Controller */,
 				DAA8DB5E251E50F20052AF85 /* Assets.xcassets */,
-				DAA8DB60251E50F20052AF85 /* LaunchScreen.storyboard */,
 				DAA8DB63251E50F20052AF85 /* Info.plist */,
-				DAD36B39252E2AE6001F8EE6 /* .swiftlint.yml */,
 			);
 			path = UIkitComponents;
+			sourceTree = "<group>";
+		};
+		DAB5BDBE2530288A006B1AEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAB5BDBF25302894006B1AEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAB5BDC0253028A3006B1AEF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8DB59251E50F10052AF85 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAB5BDC1253028B8006B1AEF /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DAA8DB60251E50F20052AF85 /* LaunchScreen.storyboard */,
+				DAA8DB5B251E50F10052AF85 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		DAB5BDC2253028F4006B1AEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAD36B39252E2AE6001F8EE6 /* .swiftlint.yml */,
+				DAA8DB57251E50F10052AF85 /* SceneDelegate.swift */,
+				DAA8DB55251E50F10052AF85 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

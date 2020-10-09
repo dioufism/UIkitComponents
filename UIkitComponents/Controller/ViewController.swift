@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+//MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightSlider: UISlider!
     @IBOutlet weak var visitSwitch: UISwitch!
@@ -29,11 +30,8 @@ class ViewController: UIViewController {
         setupSlider()
         setupStepper()
         self.datePicker.addTarget(self, action: #selector(setDate), for: .valueChanged)
-
     }
-
-//MARK: -Helper Function
-
+//MARK: - Helper Function
     private func setupVisit() {
         self.visitTextField.inputView = datePicker
         datePicker.datePickerMode = .date
@@ -63,11 +61,10 @@ class ViewController: UIViewController {
         self.puppyCountLabel.text = " \(Int(self.puppyCount.value)) Puppies"
         }
     }
-
     @objc func updateWeightValue() {
             self.weightSliderText.text = "\(Int(self.weightSlider.value)) lbs"
         }
-//MARK:- Action Function
+//MARK: - Action Function
     @objc func setDate() {
         let calendar =  Calendar.current
         let components =  calendar.dateComponents([.day, .month, .year], from: self.datePicker.date)
